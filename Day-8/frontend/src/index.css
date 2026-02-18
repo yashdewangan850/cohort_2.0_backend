@@ -1,26 +1,61 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html, body,#root{
+html,
+body,
+#root {
   height: 100%;
   width: 100%;
-} 
+}
 
-html{
+html {
   background-color: #121212;
   color: rgb(238, 235, 235);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.notes{
+.notes {
   display: flex;
   flex-wrap: wrap;
 }
-.note{
+.note {
   background-color: #474747;
   border-radius: 0.7rem;
   padding: 1rem;
   width: 20rem;
   margin: 1rem;
+}
+.note button {
+  background-color: rgb(249, 56, 56);
+  color: rgb(238, 235, 235);
+  border:none;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.add-note-form {
+  display: flex;
+  gap: 1rem;
+  padding-block: 2rem;
+  padding-inline: 5rem;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: #474747;
+  color: rgb(238, 235, 235);
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(0.9);
 }
