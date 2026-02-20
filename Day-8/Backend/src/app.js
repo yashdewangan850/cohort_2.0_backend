@@ -7,6 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static(path.join(__dirname, "../public")))
 //  -POST /appi/notes - Create a new note
 //  -create new notes and store data in mongodb
 //  -req.body - {title, description}
