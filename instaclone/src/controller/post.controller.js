@@ -78,7 +78,7 @@ async function getPostController(req,res){
     })
   }
 
-  async function getPostDetailsController(req,ees){
+  async function getPostDetailsController(req,res){
     const token = req.cookis.token
     if(!token){
       returnres.status(401).json({
@@ -105,7 +105,7 @@ async function getPostController(req,res){
     })
   }
 
-  const isValidUser = post.user === userId
+  const isValidUser = post.user.toString() === userId
   if(!isValidUser){
     return res.status(403).json({
       message:"Forbidden Content"
