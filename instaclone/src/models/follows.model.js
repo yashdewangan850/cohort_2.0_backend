@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const folowSchema = new mongoose.Schema({
+const followSchema = new mongoose.Schema({
      follower:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"users",
@@ -16,5 +16,5 @@ const folowSchema = new mongoose.Schema({
     timestamps: true
 })
 
-
-module.exports = folowSchema
+const folloModel = mongoose.model("follows", followSchema)
+module.exports = folloModel
