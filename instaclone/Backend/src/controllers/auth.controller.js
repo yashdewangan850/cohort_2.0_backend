@@ -1,5 +1,6 @@
 const userModel = require('../models/user.model')
 const bcrypt = require("bcryptjs")
+const { response } = require('express')
 const jwt = require("jsonwebtoken")
 
 
@@ -115,7 +116,24 @@ async function loginController(req, res) {
         })
 }
 
+async function getMeController(req,res){
+    const userId = req.user.id
+
+    const user = await userModel.findById(userId);
+
+        res.status(200).json({
+            user:{
+                usernamr:user.username,
+                email:user.email,
+                bid:user.bio,
+                profileImage:user.profileImage
+            }
+        })
+    
+}
+
 module.exports = {
     registerController,
-    loginController
+    loginController,
+    getMeController
 }
