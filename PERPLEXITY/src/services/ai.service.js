@@ -6,7 +6,7 @@ const model = new ChatGoogleGenerativeAI({
 });
 
 export async function testAI(){
-    model.invoke("what is fullstack").then((response)=>{
+    model.invoke("what is webtechnology").then((response)=>{
         console.log(response.text)
     })
 }
