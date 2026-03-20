@@ -5,9 +5,5 @@ const model = new ChatGoogleGenerativeAI({
   apiKey: process.env.GEMINI_API_KEY
 });
 
-export async function testAI(){
-    model.invoke("what is webtechnology").then((response)=>{
-        console.log(response.text)
-    })
-}
+
 
